@@ -1,0 +1,63 @@
+{
+  "started_at": "2026-05-03T20:17:03",
+  "brief_path": "examples\\application_brief.md",
+  "provider": "local-deterministic",
+  "model": "rules-v1",
+  "review_score": 100,
+  "outputs": [
+    "outputs\\demo-run\\application_answer.md",
+    "outputs\\demo-run\\workflow_log.md",
+    "outputs\\demo-run\\evidence_checklist.md"
+  ],
+  "agents": [
+    {
+      "name": "IntakeAgent",
+      "objective": "提取申请目标、已有约束、可证明材料和风险点。",
+      "metrics": {
+        "chars": 224,
+        "approx_tokens": 140,
+        "sha256_12": "161d60449f59",
+        "agent": 7,
+        "evidence": 10,
+        "risk": 4
+      }
+    },
+    {
+      "name": "PlannerAgent",
+      "objective": "把申请材料任务拆成可执行的多 Agent 工作流。",
+      "metrics": {
+        "chars": 281,
+        "approx_tokens": 176,
+        "sha256_12": "a8496e66f86c"
+      }
+    },
+    {
+      "name": "DraftAgent",
+      "objective": "生成可直接填写到申请表第 04 题的中文成果描述。",
+      "metrics": {
+        "chars": 577,
+        "approx_tokens": 361,
+        "sha256_12": "b2b82732760b"
+      }
+    },
+    {
+      "name": "EvidenceAgent",
+      "objective": "生成第 05 题可上传材料清单和每项材料的证明点。",
+      "metrics": {
+        "chars": 413,
+        "approx_tokens": 258,
+        "sha256_12": "7067fa0800e1"
+      }
+    },
+    {
+      "name": "ReviewerAgent",
+      "objective": "审查申请材料是否具体、可信、可证明。",
+      "metrics": {
+        "chars": 213,
+        "approx_tokens": 133,
+        "sha256_12": "225a42fddd34",
+        "review_score": 100
+      }
+    }
+  ]
+}
