@@ -1,0 +1,11 @@
+[project]
+name = "agentproof"
+version = "0.1.0"
+description = "A small multi-agent evidence pack builder for AI-assisted project applications."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+agentproof = "agentproof.cli:main"
+
